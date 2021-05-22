@@ -24,7 +24,7 @@ public class DepartmentService {
         return this.departmentRepository.findById(id);
     }
 
-    public String updateUser(final String id, final String deptName) {
+    public String updateDepartment(final String id, final String deptName) {
         boolean isDeptExists = this.departmentRepository.existsById(id);
         if (!isDeptExists) {
             throw new DepartmentNotFoundException();

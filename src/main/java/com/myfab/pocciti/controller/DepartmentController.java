@@ -34,6 +34,6 @@ public class DepartmentController {
         final String deptName = body.get("deptName");
         if (deptName == null || id.isEmpty())
             throw new RuntimeException("Id or deptName is missing!");
-        return departmentService.updateUser(id, deptName);
+        return departmentService.updateDepartment(id, deptName);
     }
 }
