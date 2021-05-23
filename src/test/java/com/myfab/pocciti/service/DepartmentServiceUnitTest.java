@@ -4,6 +4,7 @@ package com.myfab.pocciti.service;
 import com.myfab.pocciti.exception.DepartmentNotFoundException;
 import com.myfab.pocciti.repository.DepartmentRepository;
 import org.junit.jupiter.api.Test;
+import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 
@@ -12,16 +13,16 @@ import static org.assertj.core.api.Assertions.assertThatCode;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
-class DepartmentServiceTest {
-
-    private DepartmentService departmentService;
+class DepartmentServiceUnitTest {
 
     @Mock
     private DepartmentRepository departmentRepository;
 
-    public DepartmentServiceTest() {
+    @InjectMocks
+    private DepartmentService departmentService;
+
+    public DepartmentServiceUnitTest() {
         MockitoAnnotations.initMocks(this);
-        departmentService = new DepartmentService(departmentRepository);
     }
 
     @Test

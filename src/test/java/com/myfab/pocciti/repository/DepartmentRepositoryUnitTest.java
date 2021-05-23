@@ -11,13 +11,13 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatCode;
 
 @DataJpaTest
-class DepartmentRepositoryTest {
+class DepartmentRepositoryUnitTest {
 
 
     private final DepartmentRepository departmentRepository;
 
     @Autowired
-    DepartmentRepositoryTest(DepartmentRepository departmentRepository) {
+    DepartmentRepositoryUnitTest(DepartmentRepository departmentRepository) {
         this.departmentRepository = departmentRepository;
         departmentRepository.save(new Department("D005", "CSE"));
     }

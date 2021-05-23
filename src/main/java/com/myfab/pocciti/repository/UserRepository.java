@@ -11,6 +11,7 @@ import org.springframework.transaction.annotation.Transactional;
 public interface UserRepository extends JpaRepository<User, String> {
     @Transactional
     @Modifying(clearAutomatically = true)
-    @Query("update User set firstName=:firstname,lastName=:lastname where userId like :id")
+    @Query("update U" +
+            "ser set firstName=:firstname,lastName=:lastname where userId like :id")
     int updateUserName(final String id, final String firstname, final String lastname);
 }
